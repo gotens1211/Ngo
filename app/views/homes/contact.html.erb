@@ -1,0 +1,67 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+	@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;}/* cyrillic */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+1F00-1FFF;}/* greek */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+0370-03FF;}/* vietnamese */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;}/* latin-ext */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2'); unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face{font-family: 'Open Sans'; font-style: normal; font-weight: 400; src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000}
+	 body{font-family: 'Open Sans', sans-serif; background:#f8f8f8}
+	.input-group textarea{height:120px !important}
+	.input-group{margin-bottom:10px}
+	.sub-heading{font-size:24px; color:#666; padding-bottom:10px; border-bottom:solid 1px #ccc; margin-bottom:15px}
+	.input-group-addon,.form-control{border-radius:0px !important}
+	.input-group-addon{color:#06C}
+	.c-info .glyphicon{width:20px; text-align:left; color:#099}
+	.c-info p{margin:0; padding:0; margin-bottom:20px; color:#666}
+	.alert{border-radius:0px}
+	</style>
+    </head>
+    <body>
+    <div class="container">
+    
+  <div class="col-md-4 c-info">
+    <h2 class="sub-heading">Office Location</h2>
+    <p><i class="glyphicon glyphicon-map-marker"></i>Akashpuram, Bareilly, India, 243005</p>
+    <p><i class="glyphicon glyphicon-phone"></i> +00 0123456789</p>
+    <p><i class="glyphicon glyphicon-envelope"></i> email@example.com</p>
+    <p></p>
+    <p></p>
+  </div>
+  
+    <div class="col-md-8">
+    <h2 class="sub-heading">Contact Us Form</h2>
+  <form action="youractionlink" method="yourmethord" role="form">
+  <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
+  <input type="text" class="form-control" placeholder="Your Good Name">
+  </div>
+  
+   <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input type="email" class="form-control" placeholder="Your Working Email">
+  </div>
+  
+  <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input type="tel" class="form-control" placeholder="Your Phone Number">
+  </div>
+  
+  <div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-pencil"></i></span>
+  <textarea class="form-control" placeholder="Your Requirment" rows="5" required></textarea>
+  </div>
+  
+  <div class="input-group input-group-lg">
+  <input type="button" class="form-control btn-primary" value="Contact Us">
+  </div>
+  
+  </form>
+  
+  <div class="alert alert-success"><span class="glyphicon glyphicon-send"></span> &nbsp; Success! Message sent.</div>
+ 
+  <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign"></span> &nbsp; Please check the inputs.</div>
+ 
+  </div>
+  
+  
+  </div>

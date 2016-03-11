@@ -1,0 +1,21 @@
+<h1 align="center">The ones who made the right choice</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donate.each do |donate| %>
+      <tr>
+        <td><%= donate.name %></td>
+        <td><%= donate.amount%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Donate", new_donate_path ,class: "col-md-2 btn btn-success"%>

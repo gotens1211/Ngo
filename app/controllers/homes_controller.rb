@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-def donate
+def Contact
 	
 end
 

@@ -4,26 +4,28 @@
 <%= form_for @donate do |f| %>
 <div class="form-group">
 <%= f.label :name %>
-<%= f.text_field :name ,class: "form-control" ,placeholder: "Name"%>
+<%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
 </div>
 
 <div class="form-group">
 <%= f.label :email_id %>
-<%= f.email_field :email_id,class: "form-control" ,placeholder: "Email"%>
+<%= f.email_field :email_id,class: "form-control" ,placeholder: "Your Working Email"%>
 </div>
 
 <div class="form-group">
 <%= f.label :phone%>
-<%= f.phone_field :phone,class: "form-control" ,placeholder: "Phone Number"%>
+<%= f.phone_field :phone,class: "form-control" ,placeholder: "Your Phone Number"%>
 </div>
 
 <div class="form-group">
 <%= f.label :amount %>
-<%= f.number_field :amount,class: "form-control" ,placeholder: "Amount"%>
+<%= f.number_field :amount,class: "form-control" ,placeholder: "How Much you like to Donate"%>
 </div>
 
 
-<%= f.submit "Donate"%>
+<%= f.submit "Donate",class: "btn btn-success col-md-4 col-md-offset-4"%>
 <% end %>
 </div>
 </div>
+
+<%= link_to "Previous Donations", donates_path, class: "col-md-2 col-md-offset-5 btn btn-info"%>
