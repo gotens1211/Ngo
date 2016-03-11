@@ -1,0 +1,10 @@
+<h1>Welcome to our donate section</h1>
+<%= form_for @donate do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br/>
+
+  <%= f.label :amount %>:
+  <%= f.number_field :amount%><br/>
+
+  <%= f.submit %>
+<% end %>
