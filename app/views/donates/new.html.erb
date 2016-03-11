@@ -1,10 +1,29 @@
-<h1>Welcome to our donate section</h1>
+<h1 align="center">Welcome to our Donate section</h1>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">	
 <%= form_for @donate do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br/>
+<div class="form-group">
+<%= f.label :name %>
+<%= f.text_field :name ,class: "form-control" ,placeholder: "Name"%>
+</div>
 
-  <%= f.label :amount %>:
-  <%= f.number_field :amount%><br/>
+<div class="form-group">
+<%= f.label :email_id %>
+<%= f.email_field :email_id,class: "form-control" ,placeholder: "Email"%>
+</div>
 
-  <%= f.submit %>
+<div class="form-group">
+<%= f.label :phone%>
+<%= f.phone_field :phone,class: "form-control" ,placeholder: "Phone Number"%>
+</div>
+
+<div class="form-group">
+<%= f.label :amount %>
+<%= f.number_field :amount,class: "form-control" ,placeholder: "Amount"%>
+</div>
+
+
+<%= f.submit "Donate"%>
 <% end %>
+</div>
+</div>
