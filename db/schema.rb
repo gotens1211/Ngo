@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160311043421) do
     t.string   "email_id"
     t.integer  "phone",      limit: 10
     t.float    "amount"
+    t.text     "reason"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end

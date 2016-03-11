@@ -1,7 +1,18 @@
 <h1 align="center">Welcome to our Donate section</h1>
+<%= form_for(@donate) do |f| %>
+  <% if @donate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@donate.errors.count, "error") %> prohibited this donation from being saved:</h2>
+
+      <ul>
+      <% @donate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">	
-<%= form_for @donate do |f| %>
 <div class="form-group">
 <%= f.label :name %>
 <%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
@@ -22,10 +33,15 @@
 <%= f.number_field :amount,class: "form-control" ,placeholder: "How Much you like to Donate"%>
 </div>
 
+<div class="form-group">
+<%= f.label :reason %></br>
+<%= text_area :reason,class: "form-control" %>
+</div>
 
 <%= f.submit "Donate",class: "btn btn-success col-md-4 col-md-offset-4"%>
+</div>
+</div>
+
 <% end %>
-</div>
-</div>
 
 <%= link_to "Previous Donations", donates_path, class: "col-md-2 col-md-offset-5 btn btn-info"%>

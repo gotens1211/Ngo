@@ -5,6 +5,7 @@
       t.string :email_id
       t.integer :phone, limit: 10
       t.float :amount
+      t.text :reason
 
       t.timestamps null: false
   end
