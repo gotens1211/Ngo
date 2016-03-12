@@ -1,45 +1,54 @@
 <h1 align="center">Welcome to our Donate section</h1>
-<%= form_for(@donate) do |f| %>
-  <% if @donate.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@donate.errors.count, "error") %> prohibited this donation from being saved:</h2>
-
-      <ul>
-      <% @donate.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-    <% end %>
+<% if @donate.errors.any? %>
 <div class="row">
-	<div class="col-md-4 col-md-offset-4">	
-<div class="form-group">
-<%= f.label :name %>
-<%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
-</div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <div id="error_explanation">
+          <h2 class=" panel-title"><%= pluralize(@donate.errors.count, "error") %> prohibited this donation from being saved:</h2>
 
-<div class="form-group">
-<%= f.label :email_id %>
-<%= f.email_field :email_id,class: "form-control" ,placeholder: "Your Working Email"%>
-</div>
+          <ul>
+            <div class="panel-body">
+              <% @donate.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <div class="row">
+   <div class="col-md-4 col-md-offset-4">	
+    <%= form_for(@donate) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
+    </div>
 
-<div class="form-group">
-<%= f.label :phone%>
-<%= f.phone_field :phone,class: "form-control" ,placeholder: "Your Phone Number"%>
-</div>
+    <div class="form-group">
+      <%= f.label :email_id %>
+      <%= f.email_field :email_id,class: "form-control" ,placeholder: "Your Working Email"%>
+    </div>
 
-<div class="form-group">
-<%= f.label :amount %>
-<%= f.number_field :amount,class: "form-control" ,placeholder: "How Much you like to Donate"%>
-</div>
+    <div class="form-group">
+      <%= f.label :phone%>
+      <%= f.phone_field :phone,class: "form-control" ,placeholder: "Your Phone Number"%>
+    </div>
 
-<div class="form-group">
-<%= f.label :reason %></br>
-<%= text_area :reason,size: ('50*50'),class: "form-control" %>
-</div>
+    <div class="form-group">
+      <%= f.label :amount %>
+      <%= f.number_field :amount,class: "form-control" ,placeholder: "How Much you like to Donate"%>
+    </div>
 
-<%= f.submit "Donate",class: "btn btn-success col-md-4 col-md-offset-4"%>
-</div>
+    <div class="form-group">
+      <%= f.label :reason %></br>
+      <%= text_area :reason,size: ('50*50'),class: "form-control" %>
+    </div>
+
+    <%= f.submit "Donate",class: "btn btn-success col-md-4 col-md-offset-4"%>
+  </div>
 </div>
 
 <% end %>
