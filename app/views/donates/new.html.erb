@@ -35,7 +35,7 @@
 
 <div class="form-group">
 <%= f.label :reason %></br>
-<%= text_area :reason,class: "form-control" %>
+<%= text_area :reason,size: ('50*50'),class: "form-control" %>
 </div>
 
 <%= f.submit "Donate",class: "btn btn-success col-md-4 col-md-offset-4"%>
@@ -45,3 +45,5 @@
 <% end %>
 
 <%= link_to "Previous Donations", donates_path, class: "col-md-2 col-md-offset-5 btn btn-info"%>
+
+<br><br><%= link_to "Back to Home ",root_path%>
