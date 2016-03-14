@@ -2,10 +2,10 @@
 Rails.application.routes.draw do
 
   root 'homes#index'
-  get '/contact', to: 'homes#contact'
 
   # get '/donate', to: 'homes#donate'
   resources :donates
+  resources :contacts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
