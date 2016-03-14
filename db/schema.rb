@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20160314165436) do
     t.string   "name"
     t.string   "email_id"
     t.integer  "phone",       limit: 10
+    t.string   "subject"
     t.text     "requirement"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false

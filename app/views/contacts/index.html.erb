@@ -1,0 +1,11 @@
+<% @contact.each do |d| %>
+  <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= d.subject%></h3>
+  </div>
+  <div class="panel-body">
+    <%= d.name %></br>
+    <%= d.requirement %>
+  </div>
+</div>    
+<% end %>

@@ -45,8 +45,13 @@
           </div>
 
           <div class="input-group input-group-lg">
+          <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-education"></i></span>
+          <%= f.text_field :subject ,class: "form-control" ,placeholder: "Subject"%>
+        </div>
+
+          <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-pencil"></i></span>
-            <%= text_area :requirement,class: "form-control" , placeholder: "Your Requirement" , cols: "30", rows: "10"%>
+            <%= f.text_area :requirement,class: "form-control" , placeholder: "Your Requirement" %>
           </div>
 
           <div class="input-group input-group-lg">
