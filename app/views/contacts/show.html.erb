@@ -1,0 +1,14 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @contact.subject %></h3>
+  </div>
+  <div class="panel-body">
+  	<p >Submitted by: <%= @contact.name %><br> Phone :<%= @contact.phone%><br> Email id : <%= @contact.email_id%><br>Submitted on: <%= @contact.created_at%></p>
+  	<h3>Message :</h3>
+   <p class="well well-lg"><%= @contact.requirement %></p>
+    <%= link_to "Delete", contact_path(@contact), method: :delete ,data: {confirm:"Are you sure?"}, class: "btn btn-danger pull-right"%>
+  </div>
+
+</div>
+
+<%= link_to "Go Back", contacts_path%>

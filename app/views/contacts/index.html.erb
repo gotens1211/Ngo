@@ -1,11 +1,10 @@
 <% @contact.each do |d| %>
   <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= d.subject%></h3>
+   <h3 class="panel-title"><%= d.name%><%= link_to "", contact_path(d), method: :delete ,data: {confirm:"Are you sure?"}, class: " glyphicon glyphicon-remove-sign sgn pull-right"%><%= link_to "Show", contact_path(d),class: "pull-right"%></h3>
   </div>
   <div class="panel-body">
-    <%= d.name %></br>
-    <%= d.requirement %>
+    <h4>Subject: <%= d.subject %></h3>
   </div>
 </div>    
 <% end %>
