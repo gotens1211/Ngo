@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+	before_action :require_user, except: [:new, :create]
+
 	def index
 		@contact = Contact.all
 	end
@@ -8,12 +10,14 @@ class ContactsController < ApplicationController
 	end
 
 	def create 
-		@contact = Contact.new(contact_params)
+		@contact = Contact.new(contact_params)	
+		@contact.user = User.first
 		if @contact.save
 		flash[:success] = "Message Succesfully Sent."	
-		redirect_to root_path(@contact)
+		redirect_to root_path
 		else
-		render 	'new'
+		render 'new'
+
 	end
 	end
 

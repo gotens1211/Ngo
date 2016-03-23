@@ -34,10 +34,16 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
-     <%= link_to "Donate" , new_donate_path , class: "btn btn-info"%>
+        <%= link_to "Donate" , new_donate_path , class: "btn btn-info"%>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Contact us",new_contact_path%></li>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+        <% if logged_in? %>
+        <li><%= link_to "Messages",contacts_path%></li>
+        <li><%= link_to "Log out",logout_path, method: :delete%></li>
+        <% else %>
+        <li><%= link_to "Contact Us",new_contact_path%></li>
+        <li><%= link_to "Log in",login_path %></li>
+        <% end %>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>

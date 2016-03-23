@@ -6,6 +6,7 @@ class CreateContacts < ActiveRecord::Migration
     	t.integer :phone , limit:10
     	t.string :subject
     	t.text :requirement
+      t.integer :user_id
       t.timestamps null: false
     end
   end

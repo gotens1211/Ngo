@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-<%= render 'layouts/navbar'%>
+<%= render 'layouts/navbar' unless @disable_nav%>
 <div class="col-md-offset-2"><%= render 'layouts/messages'%></div>
 
 <%= yield %>
