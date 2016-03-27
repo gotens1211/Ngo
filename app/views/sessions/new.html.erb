@@ -1,20 +1,25 @@
-<div class="col-md-5 well wl">
-  <h2 align="center">Login</h2>
+<body class="bg">
 
-
-  <%= form_for(:session) do |f| %>
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
-    <%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
-  </div>
-
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-pencil"></i></span>
-    <%= f.password_field :password,class: "form-control" ,placeholder: "Password"%></div>
-
-    <div class="pull-right">
-      <%= f.submit "Login",class: "form-control"%>
+  <div class="container cntr">
+    <div class="col-md-5 col-md-offset-3 lg">
+       <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Log In</h3>
     </div>
+    <div class="panel-body">
+     <%= form_for(:session) do |f|%>
+     <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
+      <%= f.text_field :name ,class: "form-control" ,placeholder: "Your Good Name"%>
+    </div></br> 
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-pencil"></i></span>
+      <%= f.password_field :password,class: "form-control" ,placeholder: "Password"%>
+    </div></br>
+    <%= f.submit "Login",class: "form-control btn-success"%>
     <% end %>
   </div>
+    </div>
+  </div>
 </div>
+</body>

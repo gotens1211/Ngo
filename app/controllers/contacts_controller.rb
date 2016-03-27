@@ -6,19 +6,23 @@ class ContactsController < ApplicationController
 	end
 	
 	def new
-	@contact = Contact.new
+		if logged_in?
+			redirect_to contacts_path
+		else
+			@contact = Contact.new
+		end
 	end
 
 	def create 
 		@contact = Contact.new(contact_params)	
 		@contact.user = User.first
 		if @contact.save
-		flash[:success] = "Message Succesfully Sent."	
-		redirect_to root_path
+			flash[:success] = "Message Succesfully Sent."	
+			redirect_to root_path
 		else
-		render 'new'
+			render 'new'
 
-	end
+		end
 	end
 
 	def show

@@ -1,10 +1,14 @@
 class SessionsController < ApplicationController
 	def new
-		@disable_nav = true	
+		if logged_in?
+			redirect_to root_path
+		else
+			@disable_nav = true
+		end
 	end
 
 	def create
-		user = User.find_by(user_name: params[:session][:name])
+		user = User.find_by(user_name: params[:session][:name].downcase)
 		if user && user.authenticate(params[:session][:password])
 			session[:user_id] = user.id
 			flash[:success] = "You have Successfully logged in."
