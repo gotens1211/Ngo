@@ -1,2 +1,17 @@
-<h1>Thank You for all your help <%= @donate.name%></h1>
-<h3>Donated on <%= time_tag Time.now%></h2>
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title" align="center">Donation Receipt	</h3>
+  </div>
+  <div class="panel-body" align="center">
+  	<%= image_tag("donatrecp.jpg",class:"img-responsive") %>
+   <p class=" donrecp"> 
+   Name: <%= @donate.name%></br>
+   Amount: <%= @donate.amount%></br>
+   Email : <%= @donate.email_id%></br>
+   Phone : <%= @donate.phone%></br>
+   Donated on <%= time_tag Time.now%>
+</p>
+   </div>
+</div>
+</div>
