@@ -1,3 +1,4 @@
+$navbar-default-bg:#006fb9	;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -10,4 +11,27 @@ html,body{
 .container-fluid,.container{
 	height:100%
 }
+
+#logo{
+	color:#FFFFFF;
+	font-size:1.7em;
+	font-weight:bold;
+}
+
+#color-me{
+	color:#FFFFFF;
+}
+	
+
+.donate-bd{
+	border: #d3ffce black solid;
+	background-color: #ffffeb;
+}
+
+
+.donate-bg{
+	background-color: #f2e5c6;	
+}
+
+
 

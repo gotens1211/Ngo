@@ -1,24 +1,8 @@
+<body class="donate-bg">
+<div class="container ">
+<div class="well well-lg donate-bd ">
 <h1 align="center">Welcome to our Donate section</h1>
-<% if @donate.errors.any? %>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="panel panel-danger">
-      <div class="panel-heading">
-        <div id="error_explanation">
-          <h2 class=" panel-title"><%= pluralize(@donate.errors.count, "error") %> prohibited this donation from being saved:</h2>
-
-          <ul>
-            <div class="panel-body">
-              <% @donate.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <% end %>
+<%= render 'errors'%>
   <div class="row">
    <div class="col-md-4 col-md-offset-4">	
     <%= form_for(@donate) do |f| %>
@@ -56,3 +40,6 @@
 <%= link_to "Previous Donations", donates_path, class: "col-md-2 col-md-offset-5 btn btn-info"%>
 
 <br><br><%= link_to "Back to Home ",root_path%>
+</div>
+</div>
+</body>
