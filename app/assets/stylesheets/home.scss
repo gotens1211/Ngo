@@ -1,3 +1,25 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-top{
+  margin-top: 1em;
+  height: 10em;
+  background-color:#66c2c2;
+  border-radius: 2em 2em 0em 0em;
+}
+
+.col-nav li a{
+  color: white !important;
+  font-weight:800;
+  font-size: 1em;
+}
+
+#logo-t{
+  font-family: 'Fruktur', cursive;
+  font-size: 7em;
+  color: white;
+}
+
+#qut{
+ margin-top: 10px;
+ height:10em;
+ background-color: blue;
+}

@@ -10,7 +10,7 @@ class DonatesController < ApplicationController
 	def create 
 		@donate = Donate.new(donate_params)
 		if @donate.save
-		flash[:success] = "Thank You for all your help. Donation Successful"	
+		flash[:success] = "Donation Successful"	
 		redirect_to donate_path(@donate)
 		else
 		render 	'new'

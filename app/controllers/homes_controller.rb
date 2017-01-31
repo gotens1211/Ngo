@@ -3,4 +3,7 @@ def Contact
 	
 end
 
+def about
+	
+end
 end

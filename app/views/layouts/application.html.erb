@@ -1,15 +1,21 @@
 	<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ngo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Premgausewa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Prem Gau Sewa Sansthan" />
+	<meta name="keywords" content="Ngo Dairy Cow Milk" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Fruktur" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container-fluid">
-<%= render 'layouts/navbar' unless @disable_nav%>
+<div class="container">
+
+<%#= render 'layouts/navbar' unless @disable_nav%>
 <div class="col-md-offset-2"><%= render 'layouts/messages'%></div>
 
 <%= yield %>

@@ -2,6 +2,8 @@ class SessionsController < ApplicationController
 	def new
 		if logged_in?
 			redirect_to root_path
+		else
+			@disable_nav = true
 		end
 	end
 
@@ -12,7 +14,8 @@ class SessionsController < ApplicationController
 			flash[:success] = "You have Successfully logged in."
 			redirect_to root_path
 		else
-			flash[:danger] = "Wrong User name or password"	
+			flash[:danger] = "Wrong User name or password"
+			@disable_nav = true	
 			render 'new'	
 		end
 
