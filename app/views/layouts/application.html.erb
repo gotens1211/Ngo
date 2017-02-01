@@ -1,25 +1,24 @@
-	<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Premgausewa</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Prem Gau Sewa Sansthan" />
-	<meta name="keywords" content="Ngo Dairy Cow Milk" />
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Fruktur" rel="stylesheet">
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="container">
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hr</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<%#= render 'layouts/navbar' unless @disable_nav%>
-<div class="col-md-offset-2"><%= render 'layouts/messages'%></div>
-
-<%= yield %>
-</div>
-
-</body>
+        <!-- Optional theme -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <%= csrf_meta_tags %>
+        <meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<title>Benandjess</title>
+    		<meta name="description" content="Reconciling your past to release your future"/>
+    		<meta name="keywords" content="Heart Reconciliation reconcilers inner healing "/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body>
+        <%= yield %>
+    </body>
 </html>
