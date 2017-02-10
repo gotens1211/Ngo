@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'about',to:'homes#about'
 
+  get 'adminpanel' => 'adminpanel#index'
+  resources :faqs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

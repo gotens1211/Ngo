@@ -1,0 +1,29 @@
+<head>
+  <link rel="stylesheet" href="../css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+</head>
+  <%=  render 'layouts/sidenav'%>
+  <div class="main" style="font-family: 'Coiny', cursive;">
+    <br><br><br>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-4 col-sm-6">
+        <div class="panel panel-default animated bounceInDown fqh">
+      <div class="panel-heading tabb">
+        <h3 class="panel-title">FAQS</h3>
+        <%= link_to "faq", faqs_path%>
+      </div>
+      <div class="panel-body" style="font-size:8em;
+                                      text-align:center">
+        <%= Faq.all.count %>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+  $(".fqh a").hide();
+  $(".fqh").click(function() {
+    window.location = $(this).find("a").attr("href");
+    return false;
+    });
+</script>

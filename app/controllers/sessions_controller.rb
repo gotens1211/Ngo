@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:session][:password])
 			session[:user_id] = user.id
 			flash[:success] = "You have Successfully logged in."
-			redirect_to root_path
+			redirect_to adminpanel_path
 		else
 			flash[:danger] = "Wrong User name or password"
 			@disable_nav = true	

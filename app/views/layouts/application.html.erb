@@ -19,6 +19,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
+    <% unless flash.empty?  %>
+          <script type="text/javascript">
+              <% flash.each do |f| %>
+              <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info').gsub('alert', 'custom_error') %>
+              <% if type!="toastr_error" %>
+              toastr['<%= type %>']('<%= f[1] %>');
+              <% end %>
+
+              <% end %>
+          </script>
+
+          <% if flash[:toastr_error] %>
+          <script type="text/javascript">
+              <% flash[:toastr_error].each do |message| %>
+              toastr.error('<%= message%>');
+              <% end %>
+          </script>
+          <% end %>
+          <% end %>
         <%= yield %>
     </body>
 </html>

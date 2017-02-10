@@ -1,0 +1,62 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Listing Faqs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @faqs.each do |faq| %>
+      <tr>
+        <td><%= link_to 'Show', faq %></td>
+        <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+        <td><%= link_to 'Destroy', faq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Faq', new_faq_path %> -->
+
+<%= render 'layouts/sidenav' %>
+<div class="main">
+		<%= link_to "Add FAQ", new_faq_path, class: "btn btn-primary" %>
+<br><br>
+<% @faqs.each do |f| %>
+	<div class="panel panel-default">
+	<div class="panel-heading"><%= f.question %>
+		<button id="btn-show<%= f.id %>" class="pull-right btn btn-link"><i class="glyphicon glyphicon-chevron-down"></i></button>
+		<button id="btn-hide<%= f.id %>" class="pull-right btn btn-link"><i class="glyphicon glyphicon-chevron-up"></i></button>
+	</div>
+	<div class="panel-body" id="pcont<%= f.id %>">
+		<%= f.answer %>
+	</div>
+	</div>
+	<%= link_to 'Edit', edit_faq_path(f),class: "btn btn-info btn-sm" %>
+	<%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger btn-sm" %>
+	<br><br>
+	<script type="text/javascript">
+		$("#pcont<%= f.id %>").hide();
+		$("#btn-hide<%= f.id %>").hide();
+		$("#btn-show<%= f.id %>").click(function(){
+			$("#pcont<%= f.id %>").show();
+			$(this).hide();
+			$("#btn-hide<%= f.id %>").show();
+		});
+		$("#btn-hide<%= f.id %>").click(function(){
+			$("#pcont<%= f.id %>").hide();
+			$(this).hide();
+			$("#btn-show<%= f.id %>").show();
+		});
+	</script>
+
+		<% end %>
+</div>
+</div>
+</div>
