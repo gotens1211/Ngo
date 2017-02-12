@@ -12,10 +12,9 @@
   <% end %>
   <%= f.label :Question, class: "control-label" %>
   <%= f.text_field :question, class: "form-control" %>
-  <% if !logged_in? %>
   <%= f.label :answer, class: "control-label" %>
   <%= f.text_area :answer, class: "form-control" %>
-  <% end %><br>
+  <br>
   <div class="actions">
   <%= f.submit "Submit", class: "btn btn-success" %>
   </div>
